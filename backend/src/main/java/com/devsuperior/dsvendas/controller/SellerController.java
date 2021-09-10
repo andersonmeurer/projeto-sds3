@@ -13,6 +13,7 @@ import com.devsuperior.dsvendas.services.SellerService;
 
 @RestController
 @RequestMapping(value = "/sellers")
+//localhost:8080/sellers
 public class SellerController {
 
 	@Autowired

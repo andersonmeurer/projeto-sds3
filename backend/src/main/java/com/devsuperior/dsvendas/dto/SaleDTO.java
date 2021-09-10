@@ -1,10 +1,13 @@
 package com.devsuperior.dsvendas.dto;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import com.devsuperior.dsvendas.entity.Sale;
 
-public class SaleDTO {
+public class SaleDTO implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private Long id;
 	private Integer visited;
@@ -82,7 +85,5 @@ public class SaleDTO {
 	public void setSeller(SellerDTO seller) {
 		this.seller = seller;
 	}
-	
-	
 
 }

@@ -11,3 +11,11 @@ public class DsvendasApplication {
 	}
 
 }
+
+/*
+http://localhost:8080/sellers
+http://localhost:8080/seles/amount-by-seller
+http://localhost:8080/seles/success-by-seller
+
+
+ */
