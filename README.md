@@ -11,6 +11,6 @@ URL para acesso ao banco de dados H2: http://localhost:8080/h2-console
 
 # endpoint
  - > https://sds3-anderson.herokuapp.com
- - > http://localhost:8080/sellers
- - > http://localhost:8080/seles/amount-by-seller
- - > http://localhost:8080/seles/success-by-seller
+ - > https://sds3-anderson.herokuapp.com/sellers
+ - > https://sds3-anderson.herokuapp.com/seles/amount-by-seller
+ - > https://sds3-anderson.herokuapp.com/seles/success-by-seller
