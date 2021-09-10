@@ -17,7 +17,7 @@ import org.hibernate.annotations.ManyToAny;
 
 @Entity
 @Table(name="tb_sales")
-public class Seles {
+public class Sale {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,11 +31,11 @@ public class Seles {
 	@JoinColumn(name = "seller_id")
 	private Seller seller;
 	
-	public Seles() {
+	public Sale() {
 	}
 
 
-	public Seles(Long id, Integer visited, Integer deals, Double amount, LocalDate localDate, Seller seller) {
+	public Sale(Long id, Integer visited, Integer deals, Double amount, LocalDate localDate, Seller seller) {
 		this.id = id;
 		this.visited = visited;
 		this.deals = deals;
@@ -45,23 +45,64 @@ public class Seles {
 	}
 
 
+	public Long getId() {
+		return id;
+	}
+
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
+
+	public Integer getVisited() {
+		return visited;
+	}
+
 
 	public void setVisited(Integer visited) {
 		this.visited = visited;
 	}
 
+
+	public Integer getDeals() {
+		return deals;
+	}
+
+
 	public void setDeals(Integer deals) {
 		this.deals = deals;
 	}
+
+
+	public Double getAmount() {
+		return amount;
+	}
+
 
 	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
 
-	public void setLocalDate(LocalDate localDate) {
-		this.date = localDate;
+
+	public LocalDate getDate() {
+		return date;
 	}
+
+
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+
+
+	public Seller getSeller() {
+		return seller;
+	}
+
+
+	public void setSeller(Seller seller) {
+		this.seller = seller;
+	}
+
+
 }

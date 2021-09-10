@@ -50,6 +50,16 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+			<!-- nao precisa rebotar a aplicacao para aplicar as alteracoes. -->
+			<!-- Alternativa correta! O módulo DevTools inclui ferramentas utilitárias 
+				no projeto, dentre elas a Automatic Restart, que reinicia o servidor automaticamente 
+				ao detectar alterações no código fonte da aplicação. -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 
 	<build>

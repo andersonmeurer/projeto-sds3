@@ -20,5 +20,4 @@ public class SellerService {
 		List<Seller> lsit = repository.findAll();
 		return lsit.stream().map(x -> new SellerDTO(x)).collect(Collectors.toList());
 	}
-
 }
