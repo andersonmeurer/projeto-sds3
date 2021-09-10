@@ -5,3 +5,6 @@ Disponível em: https://devsuperior.com.br/evento-sds?episodio=1. Acesso em: 09 
 
 
 https://andersonmeurer.netlify.app/
+---------------------
+URL para acesso ao banco de dados H2: http://localhost:8080/h2-console
+ - > JDBC URL: "jdbc:h2:mem:testdb"
