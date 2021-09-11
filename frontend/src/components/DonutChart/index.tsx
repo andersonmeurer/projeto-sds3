@@ -18,7 +18,7 @@ const DonutChart = () => {
             .then(
                 resposta => {
                     const data = resposta.data as SaleSum[];
-                    const myLabels = data.map(x => x.sellerSum);
+                    const myLabels = data.map(x => x.sellerSum);//rever, deveria ser o nome
                     const mySeries = data.map(x => x.sum);
 
                     serChartData({ labels: myLabels, series: mySeries });
