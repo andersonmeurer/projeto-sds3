@@ -18,10 +18,10 @@ function Dashboard() {
                         <h5 className="text-center text-secondary">Todas Vendas</h5>
                         <DonutChart />
                     </div>
+                    <div className='py-3'>
+                        <h2 className='text-primary'>Todas as vendas</h2>
+                    </div>
                     <DataTable />
-                </div>
-                <div className='py-3'>
-                    <h2 className='text-primary'>Todas vendas</h2>
                 </div>
             </div>
             <Footer />
