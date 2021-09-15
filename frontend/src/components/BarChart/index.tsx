@@ -19,7 +19,7 @@ type ChartData = {
 
 const BarChart = () => {
 
-    const [chartData, serChartData] = useState<ChartData>({
+    const [chartData, setChartData] = useState<ChartData>({
         labels: {
             categories: []
         },
@@ -32,26 +32,26 @@ const BarChart = () => {
     });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/seles/success-by-seller`)
+        axios.get(`${BASE_URL}/sales/success-by-seller`)
             .then(
                 resposta => {
                     const data = resposta.data as SaleSuccess[];
-                    const myLabels = data.map(x => x.sellerName);
-                    const mySeries = data.map(x => round(100.0 * x.deals / x.visited, 1));
+                    const name = data.map(x => x.name);
+                    const dados = data.map(x => round(100.0 * (x.deals / x.visited), 1));
 
-                    serChartData({
+                    setChartData({
                         labels: {
-                            categories: myLabels
+                            categories: name
                         },
                         series: [
                             {
                                 name: "% Success",
-                                data: mySeries
+                                data: dados
                             }
                         ]
                     });
                     //console.log(chartData);
-                });
+                })
         }, []);
 
     const options = {

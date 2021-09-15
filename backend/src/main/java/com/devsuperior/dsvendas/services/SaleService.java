@@ -12,14 +12,14 @@ import com.devsuperior.dsvendas.dto.SaleDTO;
 import com.devsuperior.dsvendas.dto.SaleSuccessDTO;
 import com.devsuperior.dsvendas.dto.SaleSumDTO;
 import com.devsuperior.dsvendas.entity.Sale;
-import com.devsuperior.dsvendas.repositories.SeleRepository;
+import com.devsuperior.dsvendas.repositories.SaleRepository;
 import com.devsuperior.dsvendas.repositories.SellerRepository;
 
 @Service
 public class SaleService {
 
 	@Autowired
-	private SeleRepository repository;
+	private SaleRepository repository;
 	
 	@Autowired
 	private SellerRepository sellerRepository;

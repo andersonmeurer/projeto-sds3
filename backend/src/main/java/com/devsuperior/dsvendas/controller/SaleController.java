@@ -16,8 +16,8 @@ import com.devsuperior.dsvendas.dto.SaleSumDTO;
 import com.devsuperior.dsvendas.services.SaleService;
 
 @RestController
-@RequestMapping(value = "/seles")
-//localhost:8080/seles/success-by-seller
+@RequestMapping(value = "/sales")
+//localhost:8080/sales/success-by-seller
 public class SaleController {
 
 	@Autowired

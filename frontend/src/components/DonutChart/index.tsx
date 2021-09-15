@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import Chart from 'react-apexcharts'
+import Chart from 'react-apexcharts';
 import { SaleSum } from 'types/sale';
 import { BASE_URL } from 'utils/requests';
 
@@ -11,17 +11,20 @@ type ChartData = {
 
 const DonutChart = () => {
 
-    const [chartData, serChartData] = useState<ChartData>({ labels: [], series: [] });
+    const [chartData, setChartData] = useState<ChartData>({
+        labels: [],
+        series: []
+    });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/seles/amount-by-seller`)
+        axios.get(`${BASE_URL}/sales/amount-by-seller`)
             .then(
                 resposta => {
                     const data = resposta.data as SaleSum[];
-                    const myLabels = data.map(x => x.sellerSum);//rever, deveria ser o nome
+                    const myLabels = data.map(x => x.name);//rever, deveria ser o nome
                     const mySeries = data.map(x => x.sum);
 
-                    serChartData({ labels: myLabels, series: mySeries });
+                    setChartData({ labels: myLabels, series: mySeries });
                     //console.log(chartData);
                 }
             )

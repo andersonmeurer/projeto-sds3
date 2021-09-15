@@ -6,7 +6,7 @@ import { SalePage } from "types/sale";
 import { formatLocalDate } from "utils/format";
 import { BASE_URL } from "utils/requests";
 
-function DataTable() {
+const DataTable = () => {
 
     const [activePage, setActivePage] = useState(0);
 
@@ -20,7 +20,7 @@ function DataTable() {
 
     //faz a chamanda apenas quando a pagina carregar
     useEffect(() => {
-        axios.get(`${BASE_URL}/seles?page=${activePage}&size=20&sort=date,desc`)
+        axios.get(`${BASE_URL}/sales?page=${activePage}&size=20&sort=date,desc`)
             .then(resposta => {
                 setPage(resposta.data)
             });
@@ -32,9 +32,8 @@ function DataTable() {
 
     return (
         <>
+            <Pagination page={page} onPageChange={changePage} />
             <div className="table-responsive">
-                
-                <Pagination page={page} onPageChange={changePage} />
 
                 <table className="table table-striped table-sm">
                     <thead>

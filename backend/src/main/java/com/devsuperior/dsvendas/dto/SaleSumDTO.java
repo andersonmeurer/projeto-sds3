@@ -3,29 +3,28 @@ package com.devsuperior.dsvendas.dto;
 import java.io.Serializable;
 
 import com.devsuperior.dsvendas.entity.Seller;
-import com.sun.source.doctree.SerialDataTree;
 
 public class SaleSumDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private String sellerSum;
+	private String name;
 	private Double sum;
 
 	public SaleSumDTO() {
 	}
 
 	public SaleSumDTO(Seller seller, Double sum) {
-		this.sellerSum = seller.getName();
+		this.name = seller.getName();
 		this.sum = sum;
 	}
 
-	public String getSellerSum() {
-		return sellerSum;
+	public String getName() {
+		return name;
 	}
 
-	public void setSellerSum(String sellerSum) {
-		this.sellerSum = sellerSum;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public Double getSum() {
